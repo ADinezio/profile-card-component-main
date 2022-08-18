@@ -1,0 +1,159 @@
+:root {
+  /* Primary Color */
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Neutral Color */
+  --darkGray: hsl(0, 0%, 59%);
+
+  /* Font */
+  --font: "Kumbh Sans", sans-serif;
+
+  /* - Font size (name and stats): 18px */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  font-family: var(--font);
+}
+p {
+  color: var(--darkGray);
+}
+h1,
+h2 {
+  font-size: 1.8rem;
+}
+
+/* -------------------------------------------------------------- */
+/* main */
+.main {
+  background-color: var(--darkCyan);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-top,
+.img-bottom {
+  position: absolute;
+}
+.img-top {
+  top: -5rem;
+  left: -15rem;
+  transform: rotate(-60deg);
+}
+.img-bottom {
+  right: -15rem;
+  bottom: 0rem;
+}
+
+@media (min-width: 500px) {
+  .img-top {
+    top: -15rem;
+    left: -10rem;
+    transform: none;
+  }
+  .img-bottom {
+    right: -10rem;
+    bottom: -10rem;
+  }
+}
+@media (min-width: 670px) {
+  .img-top {
+    top: -40rem;
+    left: -30rem;
+  }
+  .img-bottom {
+    right: -40rem;
+    bottom: -40rem;
+  }
+}
+@media (min-width: 1000px) {
+  .img-top {
+    top: -40rem;
+    left: -10rem;
+  }
+  .img-bottom {
+    right: -5rem;
+    bottom: -50rem;
+  }
+}
+
+/* -------------------------------------------------------------- */
+/* user */
+.user {
+  position: absolute;
+  width: 90%;
+  max-width: 40rem;
+  max-height: 40rem;
+  margin: auto auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: var(--white);
+  border-radius: 2rem;
+}
+
+/* -------------------------------------------------------------- */
+/* user__bg */
+.user__bg img {
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+/* -------------------------------------------------------------- */
+/* user__image */
+.user__image {
+  display: flex;
+  justify-content: center;
+  margin-top: -5.5rem;
+}
+.image {
+  border: 0.4rem solid var(--white);
+  border-radius: 50%;
+  padding-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------- */
+/* info__name */
+.info__name {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 0.2rem solid hsl(11, 3%, 91%);
+  padding-bottom: 3rem;
+}
+.info__name span {
+  color: var(--darkGray);
+  font-weight: 400;
+}
+
+/* -------------------------------------------------------------- */
+/*info__data */
+
+.info__data {
+  text-align: center;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info__data p {
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
